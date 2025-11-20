@@ -18,7 +18,8 @@ function assertTitleRelated(expected, actual, context = '') {
 }
 
 export async function login(page, baseUrl, email, password) {
-  await page.goto(`${baseUrl}/auth/login`);
+  await page.goto(baseUrl);
+  await page.click('text=Login'); 
   await page.fill('input[type="email"]', email);
   await page.fill('input[type="password"]', password);
   await page.click('button:has-text("sign in")');
