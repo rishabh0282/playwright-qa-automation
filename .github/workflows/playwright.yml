@@ -12,8 +12,8 @@ jobs:
 
     # Inject secrets as environment variables
     env:
-      EMAIL: ${{ secrets.EMAIL }}
-      PASSWORD: ${{ secrets.PASSWORD }}
+      LOGIN_EMAIL: ${{ secrets.LOGIN_EMAIL }}
+      LOGIN_PASSWORD: ${{ secrets.LOGIN_PASSWORD }}
       BASE_URL: ${{ secrets.BASE_URL }}
 
     steps:
