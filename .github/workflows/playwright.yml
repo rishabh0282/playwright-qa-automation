@@ -10,6 +10,12 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    # Inject secrets as environment variables
+    env:
+      EMAIL: ${{ secrets.EMAIL }}
+      PASSWORD: ${{ secrets.PASSWORD }}
+      BASE_URL: ${{ secrets.BASE_URL }}
+
     steps:
       # Checkout your repo
       - name: Checkout code
@@ -20,6 +26,15 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 18
+
+      # Cache node modules for faster builds (optional)
+      - name: Cache node modules
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
       # Install dependencies
       - name: Install dependencies
@@ -33,7 +48,7 @@ jobs:
       - name: Run Playwright tests
         run: npx playwright test
 
-      # Upload HTML report (optional but useful)
+      # Upload HTML report as artifact
       - name: Upload Playwright report
         if: always()
         uses: actions/upload-artifact@v4
