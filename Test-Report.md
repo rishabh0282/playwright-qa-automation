@@ -65,6 +65,5 @@ Automation testing of the **My Events** dashboard and credit system revealed mul
 - Add automated tests to catch quota overflow and deletion persistence issues.  
 
 ---
-
-📌 **Final Takeaway:**  
+ **Final Takeaway:**  
 The DELETE API is functioning correctly, but the **UI does not reflect backend state**. Combined with the quota bug and accessibility mismatch, these are critical issues that block reliable automation and need urgent 
