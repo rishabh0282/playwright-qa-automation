@@ -30,7 +30,7 @@ npx playwright install --with-deps
 
 # Run tests
 npx playwright test
-
+```
 ---
 
 
