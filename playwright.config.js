@@ -3,7 +3,7 @@ import { defineConfig } from '@playwright/test';
 
 export default defineConfig({
   testDir: './tests',
-  fullyParallel: true,   // ✅ run all tests in parallel
+  fullyParallel: false,   
   retries: 1,            // optional: retry once on failure
   reporter: [['list'], ['html', { outputFolder: 'playwright-report' }]], // nice HTML report
   use: {
