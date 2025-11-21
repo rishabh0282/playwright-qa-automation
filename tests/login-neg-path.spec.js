@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 test('Login fails with wrong password', async ({ page }) => {
-  const { BASE_URL, LOGIN_EMAIL } = process.env;
+  const { BASE_URL, LOGIN_EMAIL2 } = process.env;
 
   await page.goto(`${BASE_URL}/auth/login`);
   await page.fill('input[type="email"]', LOGIN_EMAIL2);
