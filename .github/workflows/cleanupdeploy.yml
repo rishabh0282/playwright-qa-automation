@@ -9,7 +9,7 @@ jobs:
     permissions:
       deployments: write
     steps:
-      - name: 🗑 Delete GitHub Pages deployments
+      - name: Delete GitHub Pages deployments
         uses: strumwolf/delete-deployment-environment@v2
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
