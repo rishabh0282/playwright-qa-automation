@@ -11,6 +11,15 @@ The latest test execution report is automatically published via GitHub Actions a
 
 [![Playwright Tests](https://github.com/rishabh0282/webmobi-test-automation/actions/workflows/playwright.yml/badge.svg)](https://github.com/rishabh0282/webmobi-test-automation/actions/workflows/playwright.yml)
 
+## Known Issues (Summary)
+
+- Delete Event not persisting in UI despite backend `204` response  
+- Heading locator mismatch (accessibility roles missing)  
+- Credits exceed quota (63/50, automation still works)  
+
+Full details in [Test-Report.md](./Test-Report.md)
+
+
 ---
 
 ## Features
